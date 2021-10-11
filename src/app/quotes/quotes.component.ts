@@ -29,13 +29,13 @@ export class QuotesComponent implements OnInit {
     this.quotes.push(quote)
   }
 
-  deleteQuote(isRead, index){
-    if (isRead) {
-      let toDelete = confirm(`Are you sure you want to delete this Quote?`)
-      if(toDelete){
-        this.quotes.splice(index,1);
+  deleteQuote(isComplete: boolean, index: number) {
+    if (isComplete) {
+      const toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].name}`);
+
+      if (toDelete) {
+        this.quotes.splice(index, 1);
       }
-      
     }
   }
 

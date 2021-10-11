@@ -9,9 +9,10 @@ import{Quotes} from '../quotes'
 export class AddQuoteComponent implements OnInit {
   
   @Input() quote: Quotes;
-  @Output() isRead = new EventEmitter<boolean>();
+  @Output() isComplete = new EventEmitter<boolean>();
+
   deleteQuote(read:boolean){
-    this.isRead.emit(read);
+    this.isComplete.emit(read);
   }
   upvote(){
     this.quote.likes+=1;
