@@ -8,9 +8,9 @@ import{Quotes} from'../quotes'
 })
 export class QuotesComponent implements OnInit {
   quotes:Quotes[] = [
-    new Quotes (1,'Charles','Albert Einstein','"The human spirit must prevail over technology to allow humans be in charge."', new Date(2021,7,12),0,0),
-    new Quotes (2,'Wendy','Max Frisch','"Technology… the knack of so arranging  that we don’t have to experience it."',new Date(2021,7,14),0,0),
-    new Quotes (3,'Mikey','Libby Larsen','"The great myth of our times is that technology is communication."',new Date(2021,6,3),0,0),
+    new Quotes (1,'Charles','Albert Einstein','"The human spirit must prevail over technology to allow humans be in charge."', new Date(2021,8,12),0,0),
+    new Quotes (2,'Wendy','Max Frisch','"Technology… the knack of so arranging  that we don’t have to experience it."',new Date(2021,8,14),0,0),
+    new Quotes (3,'Mikey','Libby Larsen','"The great myth of our times is that technology is communication."',new Date(2021,8,3),0,0),
   ];
 
   get sortQuotes(){
