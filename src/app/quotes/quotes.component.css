@@ -1,3 +1,7 @@
 h1 {
   text-align: center;
 }
+.well {
+  background-color: #041b24;
+  height: 15vh;
+}
