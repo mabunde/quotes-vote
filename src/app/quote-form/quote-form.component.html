@@ -1,7 +1,8 @@
-<div class="container-fluid theform">
+<div class="container-fluid myform">
     <div class="row">
         <form (ngSubmit)='submitQuotes()' #quoteForm='ngForm'>
             <div class="form-group">
+                <br>
                 <label for="name">Topic</label>
                 <input type="text" required class="form-control" placeholder="Topic of the quote.." id="name"
                     [(ngModel)]="newQuotes.name" name="name" #name="ngModel">
@@ -36,8 +37,10 @@
                     <p> Name is Required</p>
                 </div>
             </div>
+            <br>
             <p>Add your Quote </p>
             <button type="submit" class="btn btn-outline-success btn-sm"> Add </button>
         </form>
     </div>
+    <br>
 </div>
