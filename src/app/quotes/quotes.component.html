@@ -4,19 +4,34 @@
 
     <div class="row">
         <div class="col-md-6">
-            <div *ngFor='let quote of quotes;let i = index'>
+            <div class="container">
+                <div *ngFor='let quote of quotes; let i = index'>
+                    <div class="container">
+                        <h4 id="{{i}}" appHighlight>{{quote.description}} </h4>
+                        <button class="ml-5 btn-secondary border border-secondary" (click)='toggleDetails(i)'> Quote
+                            Details </button>
+                    </div>
+                    <div>
+                        <div class="row" *ngIf="quote.showDescription">
+                            <app-add-quote [quote]='quote' (isComplete)='deleteQuote($event,i)'>
+                            </app-add-quote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div *ngFor='let quote of quotes;let i = index'>
                 <div>
-                    <h5 id={{i}} appHighlight>{{quote.name}} due on {{quote.datePosted|date|uppercase}}</h5>
+                    <h5 id={{i}} appHighlight>{{quote.name}} due on {{quote.completeDate|date|uppercase}}</h5>
                     <button (click)='toggleDetails(i)' class="btn btn-primary">Quote Details</button>
                 </div>
 
                 <div *ngIf='quote.showDescription'>
                     <app-add-quote [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-add-quote>
                 </div>
-            </div>
+            </div> -->
         </div>
         <div class="col-md-6">
-            <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+            <app-quote-form (addQuote)="addedQuote($event)"></app-quote-form>
         </div>
     </div>
 </div>
