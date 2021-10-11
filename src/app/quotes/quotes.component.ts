@@ -18,6 +18,7 @@ export class QuotesComponent implements OnInit {
   toggleDetails(index:number){
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
   }
+  
 
   constructor() { }
 
