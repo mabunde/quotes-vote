@@ -15,6 +15,9 @@ export class QuotesComponent implements OnInit {
     new Quotes (5,'Charles','Harold Abelson','Code and people','Programs must be written for people to read, and only incidentally for machines to execute.',new Date(2019,7,17)),
     new Quotes (6,'Alfred','Alice Kahn','Tech and life','For a list of all the ways technology has failed to improve the quality of life, please press three.',new Date(2019,7,15))
   ];
+  toggleDetails(index:number){
+    this.quotes[index].showDescription = !this.quotes[index].showDescription;
+  }
 
   constructor() { }
 
