@@ -1,5 +1,6 @@
-<h6 class="card-sub mb-2 text-muted"> {{quote.author}} <span id="when">Posted: {{quote.completeDate|dateCount}} days
-        ago</span></h6>
+<br>
+<h5 class="card-sub mb-2 text-muted"> Posted by {{quote.author}} : <span id="when">{{quote.completeDate|dateCount}} days
+        ago</span></h5>
 <div class="container-fluid" id="buttons">
     <button class="btn btn-sm btn-success" (click)='upvote()'>{{quote.likes}} <i class="fa fa fa-thumbs-up"
             id="likes"></i></button>
