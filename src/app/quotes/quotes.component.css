@@ -5,3 +5,7 @@ h1 {
   background-color: #041b24;
   height: 15vh;
 }
+footer p {
+  text-align: center;
+  font-size: 2rem;
+}
